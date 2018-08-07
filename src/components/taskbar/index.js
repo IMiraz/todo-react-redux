@@ -1,6 +1,9 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import{bindActionCreators} from 'redux'
+import {addTask} from '../action/index'
 
-export default class Taskbar extends React.Component{
+ class Taskbar extends React.Component{
 
   render() {
        return(
@@ -9,6 +12,13 @@ export default class Taskbar extends React.Component{
      <button>Add Task</button>
       </div>
        )
-  }
+  };
+
+function mapDispatchToProps(dispatch) {
+return  bindActionCreators({addTask},dispatch);
 
 }
+
+}
+
+export default connect(()=>{}, mapDispatchToProps)(Taskbar);
