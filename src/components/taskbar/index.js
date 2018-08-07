@@ -14,11 +14,11 @@ import {addTask} from '../action/index'
        )
   };
 
-function mapDispatchToProps(dispatch) {
-return  bindActionCreators({addTask},dispatch);
+// function mapDispatchToProps(dispatch) {
+// return  bindActionCreators({addTask},dispatch);
+
+// }
 
 }
 
-}
-
-export default connect(()=>{}, mapDispatchToProps)(Taskbar);
+export default connect(()=>{})(Taskbar);
